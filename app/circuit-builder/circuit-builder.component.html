@@ -1,0 +1,14 @@
+<app-component-toolbox id="toolbox" class="start" [connected]="this.connected" [current]="this.current" [resistance]="this.resistance" [voltage]="this.voltage" (createWireHEmitter)="createWireH()" (createWireVEmitter)="createWireV()" (createWireLDEmitter)="createWireLD()"
+(createWireRDEmitter)="createWireRD()" (createWireRUEmitter)="createWireRU()" (createWireLUEmitter)="createWireLU()" (createBulbEmitter)="createBulb()" 
+(createCellEmitter)="createCell()" (createResistorEmitter)="createResistor()" (removeBulbEmitter)="removeBulb()"></app-component-toolbox>
+<section class="section">
+    <div class="columns is-centered">
+        <div class="canvas-boundary">
+            <div *ngFor="let element of elements; let i = index">
+                <app-circuit-element id="{{'component' + i}}" (positionEmitter)="updatePositions($event)"[current]="current" [componentType]="element" 
+                [currentComponent]="this.elements.length" [leftConnectivity]="leftConnectivity[i]" [rightConnectivity]="rightConnectivity[i]"
+                [upConnectivity]="upConnectivity[i]" [downConnectivity]="downConnectivity[i]" [componentNumber]="i" [currentCoordinates]="[this.xCoordinates[i], this.yCoordinates[i]]"></app-circuit-element>
+            </div>
+        </div>
+    </div>
+</section>

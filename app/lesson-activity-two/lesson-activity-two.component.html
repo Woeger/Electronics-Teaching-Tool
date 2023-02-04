@@ -1,0 +1,19 @@
+<article *ngIf="this.LessonCompleted==false" class="message">
+    <div class="message-header">
+      <p>Lesson 2: A little resistance</p>
+    </div>
+    <div class="message-body">
+      Using resistors, try and get a total resistance of <strong>30 ohms.</strong> You can see the current resistance of the circuit at the top of the components. Tip: <em>Remember that resistance in series is different to resistance in parallel.</em>
+    </div>
+  </article>
+  <div *ngIf="this.LessonCompleted==true">
+    <article class="message is-success">
+      <div class="message-header">
+        <p>Lesson 2: Complete!</p>
+      </div>
+      <div class="message-body">
+        Great work! You managed to do it in {{this.LessonElements.length}} components. Try seeing if you can do it in less!
+      </div>
+    </article>
+  </div>
+<app-circuit-builder (resistanceOutput)="getResistance($event)" (connectedOutput)="getConnected($event)" (elementOutput)="getElements($event)"></app-circuit-builder>

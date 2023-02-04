@@ -1,0 +1,18 @@
+.canvas-boundary {
+    width: 2000px;
+    height: 2000px;
+    max-width: 100%;
+    border: dotted #ccc 2px;
+  }
+
+.container {
+    position: relative;
+  }
+
+.container canvas, #overlay {
+    position: absolute;
+  }
+  
+.canvas {
+    border: 1px solid black;
+  }

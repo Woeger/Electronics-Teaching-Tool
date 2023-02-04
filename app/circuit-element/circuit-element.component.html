@@ -1,0 +1,49 @@
+<div *ngIf="componentType == 'bulb' && current < 0.02" class="box" (cdkDragEnded)="drop($event)" cdkDragBoundary=".canvas-boundary" cdkDrag>
+    <img src="assets/img/bulb.png" alt="bulb">
+    <p class="horizontalComp">Comp: {{componentNumber}} Left: {{leftConnectivity}} Right: {{rightConnectivity}}</p>
+</div>
+
+<div *ngIf="componentType == 'bulb' && current >= 0.02" class="box" [cdkDragFreeDragPosition]="{x: this.currentCoordinates[0], y: this.currentCoordinates[1]}" (cdkDragEnded)="drop($event)" cdkDragBoundary=".canvas-boundary" cdkDrag>
+    <img src="assets/img/bulbLit.png" alt="bulb">
+    <p class="horizontalComp">Comp: {{componentNumber}} Left: {{leftConnectivity}} Right: {{rightConnectivity}}</p>
+</div>
+
+<div *ngIf="componentType == 'cell'" class="box" (cdkDragEnded)="drop($event)" cdkDragBoundary=".canvas-boundary" cdkDrag>
+    <img src="assets/img/cell.png" alt="cell">
+    <p class="horizontalComp">Comp: {{componentNumber}} Left: {{leftConnectivity}} Right: {{rightConnectivity}}</p>
+</div>
+
+<div *ngIf="componentType == 'resistor'" class="box" (cdkDragEnded)="drop($event)" cdkDragBoundary=".canvas-boundary" cdkDrag>
+    <img src="assets/img/resistor.png" alt="cell">
+    <p class="horizontalComp">Comp: {{componentNumber}} Left: {{leftConnectivity}} Right: {{rightConnectivity}}</p>
+</div>
+
+<div *ngIf="componentType == 'wireH'" class="box" (cdkDragEnded)="drop($event)" cdkDragBoundary=".canvas-boundary" cdkDrag>
+    <img src="assets/img/wireH.png" alt="cell">
+    <p class="horizontalComp">Comp: {{componentNumber}} Left: {{leftConnectivity}} Right: {{rightConnectivity}}</p>
+</div>
+
+<div *ngIf="componentType == 'wireV'" class="box" (cdkDragEnded)="drop($event)"cdkDragBoundary=".canvas-boundary" cdkDrag>
+    <img src="assets/img/wireV.png" alt="cell">
+    <p class="verticalComp">Comp: {{componentNumber}} Up: {{upConnectivity}} Down: {{downConnectivity}}</p>
+</div>
+
+<div *ngIf="componentType == 'wireLD'" class="box" (cdkDragEnded)="drop($event)" cdkDragBoundary=".canvas-boundary" cdkDrag>
+    <img src="assets/img/wireLD.png" alt="cell">
+    <p>Comp: {{componentNumber}} Left: {{leftConnectivity}} Down: {{downConnectivity}}</p>
+</div>
+
+<div *ngIf="componentType == 'wireLU'" class="box" (cdkDragEnded)="drop($event)" cdkDragBoundary=".canvas-boundary" cdkDrag>
+    <img src="assets/img/wireLU.png" alt="cell">
+    <p>Comp: {{componentNumber}} Left: {{leftConnectivity}} Up: {{upConnectivity}}</p>
+</div>
+
+<div *ngIf="componentType == 'wireRD'" class="box" (cdkDragEnded)="drop($event)" cdkDragBoundary=".canvas-boundary" cdkDrag>
+    <img src="assets/img/wireRD.png" alt="cell">
+    <p>Comp: {{componentNumber}} Right: {{rightConnectivity}} Down: {{downConnectivity}}</p>
+</div>
+
+<div *ngIf="componentType == 'wireRU'" class="box" (cdkDragEnded)="drop($event)" cdkDragBoundary=".canvas-boundary" cdkDrag>
+    <img src="assets/img/wireRU.png" alt="cell">
+    <p>Comp: {{componentNumber}} Right: {{rightConnectivity}} Up: {{upConnectivity}}</p>
+</div>

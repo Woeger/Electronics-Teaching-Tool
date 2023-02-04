@@ -1,0 +1,30 @@
+<div class="navbar is-dark">
+    <!-- logo -->
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        <img src="assets/img/uni-logo.png">
+      </a>
+    </div>
+    <!-- menu -->
+    <div class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" routerLink="/">Home</a>
+      <a class="navbar-item" routerLink="/learn">Learn</a>
+      <a class="navbar-item" routerLink="/circuit-builder">Circuit Builder</a>
+      <div class="navbar-item has-dropdown is-hoverable" routerLink="/lessons">
+        <a class="navbar-link">
+          Lessons
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            Lesson 1 - Score: {{lessonOneScore}}
+          </a>
+          <a class="navbar-item">
+            Lesson 2 - Score: {{lessonTwoScore}}
+          </a>
+        </div>
+      </div>
+    <a class="navbar-item">
+      <button (click)="refreshScores()" class="button is-dark">Refresh Scores</button>
+    </a>
+  </div>

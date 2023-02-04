@@ -1,0 +1,90 @@
+<div class="panel-container">
+    <nav class="panel is-primary">
+        <p class="panel-heading">
+            Components
+        </p>
+        <p>Current: {{current}}</p>
+        <p>Resistance: {{resistance}}</p>
+        <p>Voltage: {{voltage}}</p>
+        <p>Circuit Connected: {{connected}}</p>
+        <div style="text-align: center; padding-top: 10px;">
+            <button class="button is-danger" (click)="removeBulb()">Remove last component</button>
+        </div>
+        <div class="panel-block">   
+        </div>
+        <div class="panel-block">
+            <div>
+                <button class="button is-success" (click)="createBulb()">Add bulb</button>
+            </div>
+        </div>
+        <div class="panel-block">
+            <img src="assets/img/bulb.png" alt="bulb">
+        </div>
+        <div class="panel-block">   
+        </div>
+        <div class="panel-block">
+            <div>
+                <button class="button is-success" (click)="createCell()">Add Cell</button>
+            </div>
+        </div>
+        <div class="panel-block">
+            <img src="assets/img/cell.png" alt="cell">
+        </div>
+        <div class="panel-block">
+            <div>
+                <button class="button is-success" (click)="createResistor()">Add Resistor (10 ohms)</button>
+            </div>
+        </div>
+        <div class="panel-block">
+            <img src="assets/img/resistor.png" alt="resistor">
+        </div>
+        <div class="panel-block">
+            <div>
+                <button class="button is-success" (click)="createWireH()">Add Wire</button>
+            </div>
+        </div>
+        <div class="panel-block">
+            <img src="assets/img/wireH.png" alt="cell">
+        </div>
+        <div class="panel-block">
+            <div>
+                <button class="button is-success" (click)="createWireV()">Add Wire</button>
+            </div>
+        </div>
+        <div class="panel-block">
+            <img src="assets/img/wireV.png" alt="cell">
+        </div>
+        <div class="panel-block">
+            <div>
+                <button class="button is-success" (click)="createWireLD()">Add Wire</button>
+            </div>
+        </div>
+        <div class="panel-block">
+            <img src="assets/img/wireLD.png" alt="cell">
+        </div>
+        <div class="panel-block">
+            <div>
+                <button class="button is-success" (click)="createWireLU()">Add Wire</button>
+            </div>
+        </div>
+        <div class="panel-block">
+            <img src="assets/img/wireLU.png" alt="cell">
+        </div>
+        <div class="panel-block">
+            <div>
+                <button class="button is-success" (click)="createWireRD()">Add Wire</button>
+            </div>
+        </div>
+        <div class="panel-block">
+            <img src="assets/img/wireRD.png" alt="cell">
+        </div>
+        <div class="panel-block">
+            <div>
+                <button class="button is-success" (click)="createWireRU()">Add Wire</button>
+            </div>
+        </div>
+        <div class="panel-block">
+            <img src="assets/img/wireRU.png" alt="cell">
+        </div>
+    </nav>
+    </div>

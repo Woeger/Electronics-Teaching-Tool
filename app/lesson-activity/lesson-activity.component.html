@@ -1,0 +1,19 @@
+<article *ngIf="this.LessonCompleted==false" class="message">
+    <div class="message-header">
+      <p>Lesson 1: Let there be light!</p>
+    </div>
+    <div class="message-body">
+      For this lesson, you'll need to use the elements avalible to you in order to <strong>make a bulb light up!</strong> You'll get more stars for using less components. Tip: <em>Make sure you have a source of power along with the bulb.</em>
+    </div>
+  </article>
+  <div *ngIf="this.LessonCompleted==true">
+    <article class="message is-success">
+      <div class="message-header">
+        <p>Lesson 1: Complete!</p>
+      </div>
+      <div class="message-body">
+        Great work! You managed to do it in {{this.LessonElements.length}} components. Try seeing if you can do it in less!
+      </div>
+    </article>
+  </div>
+<app-circuit-builder (connectedOutput)="getConnected($event)" (elementOutput)="getElements($event)"></app-circuit-builder>
